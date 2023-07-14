@@ -5,7 +5,7 @@ import IconButton from "./icon-button"
 import { Expand, ShoppingCart } from "lucide-react"
 import Currency from "./currency"
 import { useRouter } from "next/navigation"
-import { MouseEventHandler } from "react"
+import { MouseEventHandler, useEffect, useState } from "react"
 import usePreviewModal from "@/hooks/use-preview-modal"
 import useCart from "@/hooks/use-cart"
 
@@ -18,13 +18,24 @@ const ProductCard: React.FC<ProductCardProps> = ({
     data
 }) => {
 
+    const [isMounted, setIsMounted] = useState(false);
     const router = useRouter();
     const previewModal = usePreviewModal();
     const cart = useCart();
 
 
+    useEffect(() => {
+      setIsMounted(true);
+    }, []);
+
+    if (!isMounted) {
+        return null;
+    }
+
+    
+
     const handleClick =()=>{
-        router.push(`/product/${data?.id}`);
+        router.push(`/product/${data.id}`);
      }
 
      const onPreview: MouseEventHandler<HTMLButtonElement> =(event)=>{
