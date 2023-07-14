@@ -9,7 +9,7 @@ import NoResults from "@/components/ui/no-result";
 import ProductCard from "@/components/ui/product-card";
 import MobileFilter from "./components/mobile-filter";
 
-export const revalidate=0;
+
 
 interface CategoryPageProps{
     params:{
