@@ -3,13 +3,21 @@ import getBillboard from "@/actions/get-billboard";
 import Billboard from "@/components/billboard";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
-import React from "react";
+import { Billboard as Bill, Product } from "@/types";
 
-const HomePage =async () => {
 
-  const products = await getProducts({isFeatured: true});
+const URL = `${process.env.NEXT_PUBLIC_API_URL}/billboards`;
 
-  const billboard = await getBillboard("c3e41594-8ab1-496f-8d6f-b872e8695279")
+
+
+const HomePage = async() => {
+
+
+const products = await getProducts({isFeatured: true});
+
+const billboard = await getBillboard("52803bc2-65c4-448d-b914-2190dbe33277")
+
+  
 
   return (
     <Container>
@@ -23,4 +31,8 @@ const HomePage =async () => {
   )
 };
 
+
+
 export default HomePage;
+
+
