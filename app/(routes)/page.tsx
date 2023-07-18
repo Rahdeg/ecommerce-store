@@ -3,22 +3,14 @@ import getBillboard from "@/actions/get-billboard";
 import Billboard from "@/components/billboard";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
-import { Billboard as Bill, Product } from "@/types";
-
-
-const URL = `${process.env.NEXT_PUBLIC_API_URL}/billboards`;
-
 
 
 const HomePage = async() => {
 
-
 const products = await getProducts({isFeatured: true});
-
 const billboard = await getBillboard("c3e41594-8ab1-496f-8d6f-b872e8695279")
 
   
-
   return (
     <Container>
         <div className="space-y-10 pb-10">

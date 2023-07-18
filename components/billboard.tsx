@@ -16,11 +16,11 @@ const Billboard: React.FC<BillboardProps> = ({data}) => {
             <div className=" font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
     {data.label}
 </div>
-</div>
-           
-
+</div>           
         </div>
     </div>
+
+
   )
 }
 
