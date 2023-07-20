@@ -49,7 +49,7 @@ const MainNav: React.FC<MainNavProps> = ({data}) => {
                     filterOption={(input, option) =>
                       (option?.value?.toString() ?? '').toLowerCase().includes(input.toLowerCase())
                     }
-                    className=" border  rounded-md " style={{width:200}}> 
+                    className=" border  rounded-md " style={{width:150}}> 
                         {
                           routes?.map((route)=>(
                             <Select.Option value={route.label} key={`${route.href}`} className={cn(' text-sm font-medium transition-colors hover:text-primary',route.active ? 'text-black dark:text-white' : " text-muted-foreground")}>{route.label}</Select.Option> 
