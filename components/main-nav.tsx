@@ -40,10 +40,10 @@ const MainNav: React.FC<MainNavProps> = ({data}) => {
         }
     </nav>
     <nav className="flex md:hidden mx-6  items-center space-x-3 md:space-x-4 lg:space-x-6 ">
-    <Select defaultValue=" Overview" size="large"
+    <Select defaultValue=" Categories" size="large"
                    allowClear
                     showSearch
-                    placeholder="Overview"
+                    placeholder="Categories"
                     optionFilterProp="children"
                     onChange={(val)=> onSelectCategory(val)} bordered={false}
                     filterOption={(input, option) =>
